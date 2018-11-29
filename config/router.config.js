@@ -8,6 +8,7 @@ export default [
       { path: '/user/login', component: './User/Login' },
       { path: '/user/register', component: './User/Register' },
       { path: '/user/register-result', component: './User/RegisterResult' },
+      { path: '/user/guest', component: './Guest/index' },
     ],
   },
   // app
@@ -18,7 +19,8 @@ export default [
     authority: ['admin', 'user'],
     routes: [
       // dashboard
-      { path: '/', redirect: '/dashboard/analysis' },
+      //{ path: '/', redirect: '/dashboard/analysis' },
+      { path: '/', redirect: '/user/guest' },
       {
         path: '/dashboard',
         name: 'dashboard',
